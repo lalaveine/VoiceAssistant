@@ -1,3 +1,5 @@
+Voice assistant for linux systems with gtk interface.
+
 Dependencies:
 ffmpeg
 sox
