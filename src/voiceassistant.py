@@ -13,7 +13,7 @@ from definitions import SNOWBOY_MODEL_PATH
 import threading
 
 # Fuzzy logic
-from fuzzywuzzy import fuzz
+from rapidfuzz import fuzz
 
 # DBus
 from pydbus import SessionBus
@@ -116,8 +116,8 @@ class VoiceAssistant(object):
 
         for identifier, triggers_vector in commands:
             for string in triggers_vector:
-                fuzzy_ratio = fuzz.ratio(cmd_text, string)
-                if fuzzy_ratio > identified_command['percent']:
+                fuzzy_ratio = fuzz.ratio(cmd_text, string, score_cutoff=identified_command['percent'])
+                if fuzzy_ratio:
                     identified_command['cmd'] = identifier
                     identified_command['percent'] = fuzzy_ratio
 

@@ -4,7 +4,6 @@ cachetools==3.1.1
 certifi==2019.3.9
 chardet==3.0.4
 Click==7.0
-fuzzywuzzy==0.17.0
 google-api-python-client==1.7.9
 google-auth==1.6.3
 google-auth-httplib2==0.0.3
@@ -23,7 +22,7 @@ pydbus==0.6.0
 pydub==0.23.1
 PyGObject==3.32.1
 PyGObject-stubs==0.0.2
-python-Levenshtein==0.12.0
+rapidfuzz==0.7.6
 requests==2.22.0
 requests-oauthlib==1.2.0
 rsa==4.0
